@@ -21,7 +21,7 @@ Those files were tested on a Parallella board + `Antmicro's LCD baseboard <https
 Parameters for the LCD screen can be adjusted in the DTB file, in the ``axi_hdmi/lcd@0`` section.
 For different screens an adapter board might be needed.
 
-License
+Licence
 -------
 
-This software, unless otherwise stated, is released on the `3-clause BSD license <http://opensource.org/licenses/BSD-3-Clause>`_.
+This software, unless otherwise stated, is released on the `BSD 3-clause licence <http://opensource.org/licenses/BSD-3-Clause>`_.
