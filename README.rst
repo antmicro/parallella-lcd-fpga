@@ -8,7 +8,7 @@ The project includes a simple graphics ipcore to display data on the LCD.
 The LCD IPCore is based on Digilent Inc's HDMI code for the ZYBO board.
 
 Example binary files
-====================
+--------------------
 
 For convienience, example binary files (to be put on an sdcard and booted from U-Boot) are provided:
 
@@ -20,3 +20,8 @@ Those files were tested on a Parallella board + `Antmicro's LCD baseboard <https
 
 Parameters for the LCD screen can be adjusted in the DTB file, in the ``axi_hdmi/lcd@0`` section.
 For different screens an adapter board might be needed.
+
+License
+-------
+
+This software, unless otherwise stated, is released on the `MIT license <http://opensource.org/licenses/MIT>`_.
