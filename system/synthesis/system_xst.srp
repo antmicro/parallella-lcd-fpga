@@ -1,0 +1,1184 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to /home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/synthesis/xst_temp_dir/
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.03 secs
+ 
+--> 
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input Format                       : MIXED
+Input File Name                    : "system_xst.prj"
+Verilog Include Directory          : {"/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/pcores/" "/opt/Xilinx/14.7/ISE_DS/EDK/hw/XilinxBFMinterface/pcores/" "/opt/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/" "/opt/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/axi_vdma_v5_04_a/hdl/verilog/" }
+
+---- Target Parameters
+Target Device                      : xc7z020clg400-1
+Output File Name                   : "../implementation/system.ngc"
+
+---- Source Options
+Top Module Name                    : system
+
+---- Target Options
+Add IO Buffers                     : NO
+Global Maximum Fanout              : 10000
+
+---- General Options
+Optimization Goal                  : speed
+Netlist Hierarchy                  : as_optimized
+Optimization Effort                : 1
+Hierarchy Separator                : /
+
+---- Other Options
+Cores Search Directories           : {../implementation}
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" into library work
+Parsing entity <system>.
+Parsing architecture <STRUCTURE> of entity <system>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <system> (architecture <STRUCTURE>) from library <work>.
+WARNING:HDLCompiler:89 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" Line 1292: <iobuf> remains a black-box since it has no binding entity.
+WARNING:HDLCompiler:634 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" Line 1336: Net <axi_interconnect_1_S_ARLEN[7]> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" Line 1347: Net <axi_interconnect_1_S_AWLEN[7]> does not have a driver.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <system>.
+    Related source file is "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd".
+    Set property "BOX_TYPE = user_black_box" for instance <processing_system7_0>.
+    Set property "BOX_TYPE = user_black_box" for instance <axi_dispctrl_0>.
+    Set property "BOX_TYPE = user_black_box" for instance <axi_interconnect_1>.
+    Set property "BOX_TYPE = user_black_box" for instance <axi_vdma_0>.
+    Set property "BOX_TYPE = user_black_box" for instance <axi_interconnect_2>.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <ENET0_GMII_TXD> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <ENET1_GMII_TXD> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <GPIO_O> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <GPIO_T> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <SDIO0_DATA_O> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <SDIO0_DATA_T> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <SDIO0_BUSVOLT> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <SDIO1_DATA_O> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <SDIO1_DATA_T> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <SDIO1_BUSVOLT> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <TRACE_DATA> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <USB0_PORT_INDCTL> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <USB1_PORT_INDCTL> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <M_AXI_GP1_ARID> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <M_AXI_GP1_AWID> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <M_AXI_GP1_WID> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <M_AXI_GP1_ARBURST> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <M_AXI_GP1_ARLOCK> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <M_AXI_GP1_ARSIZE> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <M_AXI_GP1_AWBURST> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <M_AXI_GP1_AWLOCK> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <M_AXI_GP1_AWSIZE> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <M_AXI_GP1_ARPROT> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <M_AXI_GP1_AWPROT> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <M_AXI_GP1_ARADDR> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <M_AXI_GP1_AWADDR> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <M_AXI_GP1_WDATA> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <M_AXI_GP1_ARCACHE> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <M_AXI_GP1_ARLEN> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <M_AXI_GP1_ARQOS> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <M_AXI_GP1_AWCACHE> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <M_AXI_GP1_AWLEN> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <M_AXI_GP1_AWQOS> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <M_AXI_GP1_WSTRB> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_GP0_BRESP> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_GP0_RRESP> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_GP0_RDATA> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_GP0_BID> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_GP0_RID> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_GP1_BRESP> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_GP1_RRESP> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_GP1_RDATA> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_GP1_BID> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_GP1_RID> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_ACP_BRESP> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_ACP_RRESP> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_ACP_BID> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_ACP_RID> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_ACP_RDATA> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_HP0_RCOUNT> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_HP0_WCOUNT> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_HP0_RACOUNT> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_HP0_WACOUNT> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_HP1_BRESP> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_HP1_RRESP> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_HP1_BID> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_HP1_RID> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_HP1_RDATA> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_HP1_RCOUNT> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_HP1_WCOUNT> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_HP1_RACOUNT> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_HP1_WACOUNT> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_HP2_BRESP> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_HP2_RRESP> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_HP2_BID> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_HP2_RID> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_HP2_RDATA> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_HP2_RCOUNT> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_HP2_WCOUNT> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_HP2_RACOUNT> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_HP2_WACOUNT> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_HP3_BRESP> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_HP3_RRESP> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_HP3_BID> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_HP3_RID> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_HP3_RDATA> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_HP3_RCOUNT> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_HP3_WCOUNT> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_HP3_RACOUNT> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_HP3_WACOUNT> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <DMA0_DATYPE> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <DMA1_DATYPE> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <DMA2_DATYPE> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <DMA3_DATYPE> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <FTMT_F2P_TRIGACK> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <FTMT_P2F_TRIG> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <FTMT_P2F_DEBUG> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <EVENT_STANDBYWFE> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <EVENT_STANDBYWFI> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <CAN0_PHY_TX> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <CAN1_PHY_TX> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <ENET0_GMII_TX_EN> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <ENET0_GMII_TX_ER> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <ENET0_MDIO_MDC> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <ENET0_MDIO_O> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <ENET0_MDIO_T> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <ENET0_PTP_DELAY_REQ_RX> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <ENET0_PTP_DELAY_REQ_TX> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <ENET0_PTP_PDELAY_REQ_RX> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <ENET0_PTP_PDELAY_REQ_TX> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <ENET0_PTP_PDELAY_RESP_RX> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <ENET0_PTP_PDELAY_RESP_TX> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <ENET0_PTP_SYNC_FRAME_RX> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <ENET0_PTP_SYNC_FRAME_TX> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <ENET0_SOF_RX> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <ENET0_SOF_TX> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <ENET1_GMII_TX_EN> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <ENET1_GMII_TX_ER> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <ENET1_MDIO_MDC> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <ENET1_MDIO_O> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <ENET1_MDIO_T> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <ENET1_PTP_DELAY_REQ_RX> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <ENET1_PTP_DELAY_REQ_TX> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <ENET1_PTP_PDELAY_REQ_RX> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <ENET1_PTP_PDELAY_REQ_TX> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <ENET1_PTP_PDELAY_RESP_RX> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <ENET1_PTP_PDELAY_RESP_TX> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <ENET1_PTP_SYNC_FRAME_RX> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <ENET1_PTP_SYNC_FRAME_TX> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <ENET1_SOF_RX> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <ENET1_SOF_TX> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <I2C1_SDA_O> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <I2C1_SDA_T> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <I2C1_SCL_O> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <I2C1_SCL_T> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <PJTAG_TD_T> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <PJTAG_TD_O> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <SDIO0_CLK> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <SDIO0_CMD_O> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <SDIO0_CMD_T> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <SDIO0_LED> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <SDIO0_BUSPOW> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <SDIO1_CLK> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <SDIO1_CMD_O> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <SDIO1_CMD_T> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <SDIO1_LED> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <SDIO1_BUSPOW> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <SPI0_SCLK_O> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <SPI0_SCLK_T> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <SPI0_MOSI_O> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <SPI0_MOSI_T> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <SPI0_MISO_O> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <SPI0_MISO_T> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <SPI0_SS_O> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <SPI0_SS1_O> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <SPI0_SS2_O> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <SPI0_SS_T> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <SPI1_SCLK_O> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <SPI1_SCLK_T> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <SPI1_MOSI_O> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <SPI1_MOSI_T> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <SPI1_MISO_O> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <SPI1_MISO_T> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <SPI1_SS_O> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <SPI1_SS1_O> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <SPI1_SS2_O> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <SPI1_SS_T> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <UART0_DTRN> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <UART0_RTSN> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <UART0_TX> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <UART1_DTRN> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <UART1_RTSN> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <UART1_TX> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <TTC0_WAVE0_OUT> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <TTC0_WAVE1_OUT> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <TTC0_WAVE2_OUT> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <TTC1_WAVE0_OUT> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <TTC1_WAVE1_OUT> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <TTC1_WAVE2_OUT> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <WDT_RST_OUT> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <TRACE_CTL> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <USB0_VBUS_PWRSELECT> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <USB1_VBUS_PWRSELECT> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <M_AXI_GP0_ARESETN> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <M_AXI_GP1_ARESETN> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <M_AXI_GP1_ARVALID> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <M_AXI_GP1_AWVALID> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <M_AXI_GP1_BREADY> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <M_AXI_GP1_RREADY> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <M_AXI_GP1_WLAST> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <M_AXI_GP1_WVALID> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_GP0_ARESETN> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_GP0_ARREADY> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_GP0_AWREADY> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_GP0_BVALID> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_GP0_RLAST> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_GP0_RVALID> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_GP0_WREADY> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_GP1_ARESETN> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_GP1_ARREADY> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_GP1_AWREADY> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_GP1_BVALID> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_GP1_RLAST> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_GP1_RVALID> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_GP1_WREADY> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_ACP_ARESETN> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_ACP_AWREADY> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_ACP_ARREADY> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_ACP_BVALID> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_ACP_RLAST> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_ACP_RVALID> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_ACP_WREADY> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_HP0_ARESETN> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_HP1_ARESETN> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_HP1_ARREADY> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_HP1_AWREADY> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_HP1_BVALID> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_HP1_RLAST> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_HP1_RVALID> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_HP1_WREADY> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_HP2_ARESETN> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_HP2_ARREADY> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_HP2_AWREADY> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_HP2_BVALID> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_HP2_RLAST> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_HP2_RVALID> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_HP2_WREADY> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_HP3_ARESETN> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_HP3_ARREADY> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_HP3_AWREADY> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_HP3_BVALID> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_HP3_RLAST> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_HP3_RVALID> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <S_AXI_HP3_WREADY> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <DMA0_DAVALID> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <DMA0_DRREADY> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <DMA0_RSTN> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <DMA1_DAVALID> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <DMA1_DRREADY> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <DMA1_RSTN> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <DMA2_DAVALID> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <DMA2_DRREADY> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <DMA2_RSTN> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <DMA3_DAVALID> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <DMA3_DRREADY> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <DMA3_RSTN> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <FCLK_CLK3> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <FCLK_CLK2> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <FCLK_CLK1> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <FCLK_RESET3_N> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <FCLK_RESET2_N> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <FCLK_RESET1_N> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <EVENT_EVENTO> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <IRQ_P2F_DMAC_ABORT> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <IRQ_P2F_DMAC0> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <IRQ_P2F_DMAC1> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <IRQ_P2F_DMAC2> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <IRQ_P2F_DMAC3> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <IRQ_P2F_DMAC4> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <IRQ_P2F_DMAC5> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <IRQ_P2F_DMAC6> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <IRQ_P2F_DMAC7> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <IRQ_P2F_SMC> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <IRQ_P2F_QSPI> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <IRQ_P2F_CTI> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <IRQ_P2F_GPIO> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <IRQ_P2F_USB0> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <IRQ_P2F_ENET0> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <IRQ_P2F_ENET_WAKE0> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <IRQ_P2F_SDIO0> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <IRQ_P2F_I2C0> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <IRQ_P2F_SPI0> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <IRQ_P2F_UART0> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <IRQ_P2F_CAN0> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <IRQ_P2F_USB1> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <IRQ_P2F_ENET1> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <IRQ_P2F_ENET_WAKE1> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <IRQ_P2F_SDIO1> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <IRQ_P2F_I2C1> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <IRQ_P2F_SPI1> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <IRQ_P2F_UART1> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 1501: Output port <IRQ_P2F_CAN1> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2178: Output port <DEBUG_O> of the instance <axi_dispctrl_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2178: Output port <PXL_CLK_5X_O> of the instance <axi_dispctrl_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2178: Output port <LOCKED_O> of the instance <axi_dispctrl_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <S_AXI_ARESET_OUT_N> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <S_AXI_BUSER> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <S_AXI_RUSER> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <M_AXI_AWID> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <M_AXI_AWLEN> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <M_AXI_AWSIZE> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <M_AXI_AWBURST> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <M_AXI_AWLOCK> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <M_AXI_AWCACHE> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <M_AXI_AWPROT> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <M_AXI_AWREGION> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <M_AXI_AWQOS> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <M_AXI_AWUSER> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <M_AXI_WID> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <M_AXI_WLAST> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <M_AXI_WUSER> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <M_AXI_ARID> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <M_AXI_ARLEN> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <M_AXI_ARSIZE> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <M_AXI_ARBURST> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <M_AXI_ARLOCK> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <M_AXI_ARCACHE> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <M_AXI_ARPROT> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <M_AXI_ARREGION> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <M_AXI_ARQOS> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <M_AXI_ARUSER> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <S_AXI_CTRL_BRESP> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <S_AXI_CTRL_RDATA> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <S_AXI_CTRL_RRESP> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_AW_TRANS_SEQ> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_AW_ARB_GRANT> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_AR_TRANS_SEQ> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_AR_ARB_GRANT> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_AW_TRANS_QUAL> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_AW_ACCEPT_CNT> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_AW_ACTIVE_THREAD> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_AW_ACTIVE_TARGET> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_AW_ACTIVE_REGION> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_AW_ERROR> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_AW_TARGET> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_AR_TRANS_QUAL> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_AR_ACCEPT_CNT> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_AR_ACTIVE_THREAD> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_AR_ACTIVE_TARGET> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_AR_ACTIVE_REGION> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_AR_ERROR> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_AR_TARGET> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_B_TRANS_SEQ> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_R_BEAT_CNT> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_R_TRANS_SEQ> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_AW_ISSUING_CNT> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_AR_ISSUING_CNT> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_W_BEAT_CNT> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_W_TRANS_SEQ> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_BID_TARGET> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_RID_TARGET> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_SR_SC_ARADDR> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_SR_SC_ARADDRCONTROL> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_SR_SC_AWADDR> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_SR_SC_AWADDRCONTROL> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_SR_SC_BRESP> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_SR_SC_RDATA> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_SR_SC_RDATACONTROL> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_SR_SC_WDATA> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_SR_SC_WDATACONTROL> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_SC_SF_ARADDR> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_SC_SF_ARADDRCONTROL> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_SC_SF_AWADDR> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_SC_SF_AWADDRCONTROL> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_SC_SF_BRESP> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_SC_SF_RDATA> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_SC_SF_RDATACONTROL> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_SC_SF_WDATA> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_SC_SF_WDATACONTROL> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_SF_CB_ARADDR> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_SF_CB_ARADDRCONTROL> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_SF_CB_AWADDR> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_SF_CB_AWADDRCONTROL> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_SF_CB_BRESP> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_SF_CB_RDATA> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_SF_CB_RDATACONTROL> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_SF_CB_WDATA> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_SF_CB_WDATACONTROL> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_CB_MF_ARADDR> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_CB_MF_ARADDRCONTROL> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_CB_MF_AWADDR> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_CB_MF_AWADDRCONTROL> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_CB_MF_BRESP> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_CB_MF_RDATA> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_CB_MF_RDATACONTROL> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_CB_MF_WDATA> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_CB_MF_WDATACONTROL> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_MF_MC_ARADDR> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_MF_MC_ARADDRCONTROL> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_MF_MC_AWADDR> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_MF_MC_AWADDRCONTROL> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_MF_MC_BRESP> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_MF_MC_RDATA> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_MF_MC_RDATACONTROL> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_MF_MC_WDATA> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_MF_MC_WDATACONTROL> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_MC_MP_ARADDR> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_MC_MP_ARADDRCONTROL> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_MC_MP_AWADDR> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_MC_MP_AWADDRCONTROL> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_MC_MP_BRESP> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_MC_MP_RDATA> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_MC_MP_RDATACONTROL> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_MC_MP_WDATA> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_MC_MP_WDATACONTROL> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_MP_MR_ARADDR> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_MP_MR_ARADDRCONTROL> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_MP_MR_AWADDR> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_MP_MR_AWADDRCONTROL> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_MP_MR_BRESP> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_MP_MR_RDATA> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_MP_MR_RDATACONTROL> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_MP_MR_WDATA> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_MP_MR_WDATACONTROL> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <IRQ> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <S_AXI_CTRL_AWREADY> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <S_AXI_CTRL_WREADY> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <S_AXI_CTRL_BVALID> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <S_AXI_CTRL_ARREADY> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <S_AXI_CTRL_RVALID> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <INTERCONNECT_ARESET_OUT_N> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_BID_ERROR> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2222: Output port <DEBUG_RID_ERROR> of the instance <axi_interconnect_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2430: Output port <m_axi_sg_araddr> of the instance <axi_vdma_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2430: Output port <m_axi_sg_arlen> of the instance <axi_vdma_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2430: Output port <m_axi_sg_arsize> of the instance <axi_vdma_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2430: Output port <m_axi_sg_arburst> of the instance <axi_vdma_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2430: Output port <m_axi_sg_arprot> of the instance <axi_vdma_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2430: Output port <m_axi_sg_arcache> of the instance <axi_vdma_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2430: Output port <m_axis_mm2s_tuser> of the instance <axi_vdma_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2430: Output port <m_axi_s2mm_awaddr> of the instance <axi_vdma_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2430: Output port <m_axi_s2mm_awlen> of the instance <axi_vdma_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2430: Output port <m_axi_s2mm_awsize> of the instance <axi_vdma_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2430: Output port <m_axi_s2mm_awburst> of the instance <axi_vdma_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2430: Output port <m_axi_s2mm_awprot> of the instance <axi_vdma_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2430: Output port <m_axi_s2mm_awcache> of the instance <axi_vdma_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2430: Output port <m_axi_s2mm_wdata> of the instance <axi_vdma_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2430: Output port <m_axi_s2mm_wstrb> of the instance <axi_vdma_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2430: Output port <mm2s_frame_ptr_out> of the instance <axi_vdma_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2430: Output port <s2mm_frame_ptr_out> of the instance <axi_vdma_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2430: Output port <axi_vdma_tstvec> of the instance <axi_vdma_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2430: Output port <m_axi_sg_arvalid> of the instance <axi_vdma_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2430: Output port <m_axi_sg_rready> of the instance <axi_vdma_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2430: Output port <mm2s_prmry_reset_out_n> of the instance <axi_vdma_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2430: Output port <m_axi_s2mm_awvalid> of the instance <axi_vdma_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2430: Output port <m_axi_s2mm_wlast> of the instance <axi_vdma_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2430: Output port <m_axi_s2mm_wvalid> of the instance <axi_vdma_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2430: Output port <m_axi_s2mm_bready> of the instance <axi_vdma_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2430: Output port <s2mm_prmry_reset_out_n> of the instance <axi_vdma_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2430: Output port <s_axis_s2mm_tready> of the instance <axi_vdma_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2430: Output port <mm2s_fsync_out> of the instance <axi_vdma_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2430: Output port <mm2s_prmtr_update> of the instance <axi_vdma_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2430: Output port <mm2s_buffer_empty> of the instance <axi_vdma_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2430: Output port <mm2s_buffer_almost_empty> of the instance <axi_vdma_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2430: Output port <s2mm_fsync_out> of the instance <axi_vdma_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2430: Output port <s2mm_buffer_full> of the instance <axi_vdma_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2430: Output port <s2mm_buffer_almost_full> of the instance <axi_vdma_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2430: Output port <s2mm_prmtr_update> of the instance <axi_vdma_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2430: Output port <s2mm_introut> of the instance <axi_vdma_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <S_AXI_ARESET_OUT_N> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <M_AXI_ARESET_OUT_N> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <S_AXI_AWREADY> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <S_AXI_WREADY> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <S_AXI_BID> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <S_AXI_BRESP> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <S_AXI_BUSER> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <S_AXI_BVALID> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <S_AXI_RID> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <S_AXI_RUSER> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <M_AXI_AWREGION> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <M_AXI_AWUSER> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <M_AXI_WUSER> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <M_AXI_ARREGION> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <M_AXI_ARUSER> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <S_AXI_CTRL_BRESP> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <S_AXI_CTRL_RDATA> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <S_AXI_CTRL_RRESP> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_AW_TRANS_SEQ> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_AW_ARB_GRANT> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_AR_TRANS_SEQ> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_AR_ARB_GRANT> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_AW_TRANS_QUAL> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_AW_ACCEPT_CNT> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_AW_ACTIVE_THREAD> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_AW_ACTIVE_TARGET> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_AW_ACTIVE_REGION> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_AW_ERROR> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_AW_TARGET> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_AR_TRANS_QUAL> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_AR_ACCEPT_CNT> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_AR_ACTIVE_THREAD> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_AR_ACTIVE_TARGET> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_AR_ACTIVE_REGION> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_AR_ERROR> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_AR_TARGET> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_B_TRANS_SEQ> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_R_BEAT_CNT> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_R_TRANS_SEQ> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_AW_ISSUING_CNT> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_AR_ISSUING_CNT> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_W_BEAT_CNT> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_W_TRANS_SEQ> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_BID_TARGET> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_RID_TARGET> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_SR_SC_ARADDR> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_SR_SC_ARADDRCONTROL> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_SR_SC_AWADDR> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_SR_SC_AWADDRCONTROL> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_SR_SC_BRESP> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_SR_SC_RDATA> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_SR_SC_RDATACONTROL> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_SR_SC_WDATA> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_SR_SC_WDATACONTROL> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_SC_SF_ARADDR> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_SC_SF_ARADDRCONTROL> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_SC_SF_AWADDR> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_SC_SF_AWADDRCONTROL> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_SC_SF_BRESP> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_SC_SF_RDATA> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_SC_SF_RDATACONTROL> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_SC_SF_WDATA> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_SC_SF_WDATACONTROL> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_SF_CB_ARADDR> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_SF_CB_ARADDRCONTROL> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_SF_CB_AWADDR> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_SF_CB_AWADDRCONTROL> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_SF_CB_BRESP> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_SF_CB_RDATA> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_SF_CB_RDATACONTROL> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_SF_CB_WDATA> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_SF_CB_WDATACONTROL> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_CB_MF_ARADDR> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_CB_MF_ARADDRCONTROL> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_CB_MF_AWADDR> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_CB_MF_AWADDRCONTROL> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_CB_MF_BRESP> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_CB_MF_RDATA> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_CB_MF_RDATACONTROL> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_CB_MF_WDATA> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_CB_MF_WDATACONTROL> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_MF_MC_ARADDR> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_MF_MC_ARADDRCONTROL> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_MF_MC_AWADDR> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_MF_MC_AWADDRCONTROL> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_MF_MC_BRESP> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_MF_MC_RDATA> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_MF_MC_RDATACONTROL> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_MF_MC_WDATA> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_MF_MC_WDATACONTROL> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_MC_MP_ARADDR> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_MC_MP_ARADDRCONTROL> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_MC_MP_AWADDR> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_MC_MP_AWADDRCONTROL> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_MC_MP_BRESP> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_MC_MP_RDATA> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_MC_MP_RDATACONTROL> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_MC_MP_WDATA> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_MC_MP_WDATACONTROL> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_MP_MR_ARADDR> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_MP_MR_ARADDRCONTROL> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_MP_MR_AWADDR> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_MP_MR_AWADDRCONTROL> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_MP_MR_BRESP> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_MP_MR_RDATA> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_MP_MR_RDATACONTROL> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_MP_MR_WDATA> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_MP_MR_WDATACONTROL> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <IRQ> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <S_AXI_CTRL_AWREADY> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <S_AXI_CTRL_WREADY> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <S_AXI_CTRL_BVALID> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <S_AXI_CTRL_ARREADY> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <S_AXI_CTRL_RVALID> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <INTERCONNECT_ARESET_OUT_N> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_BID_ERROR> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/karol/antmicro/parallella/lcd_bare/fpga/lcd_bare/system/hdl/system.vhd" line 2530: Output port <DEBUG_RID_ERROR> of the instance <axi_interconnect_2> is unconnected or connected to loadless signal.
+WARNING:Xst:653 - Signal <axi_interconnect_1_S_ARLEN<7:4>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <axi_interconnect_1_S_AWLEN<7:4>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Summary:
+	no macro.
+Unit <system> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <../implementation/system_processing_system7_0_wrapper.ngc>.
+Reading core <../implementation/system_axi_interconnect_1_wrapper.ngc>.
+Reading core <../implementation/system_axi_interconnect_2_wrapper.ngc>.
+Reading core <../implementation/system_axi_dispctrl_0_wrapper.ngc>.
+Reading core <../implementation/system_axi_vdma_0_wrapper.ngc>.
+Loading core <system_processing_system7_0_wrapper> for timing and area information for instance <processing_system7_0>.
+Loading core <system_axi_interconnect_1_wrapper> for timing and area information for instance <axi_interconnect_1>.
+Loading core <system_axi_interconnect_2_wrapper> for timing and area information for instance <axi_interconnect_2>.
+Loading core <system_axi_dispctrl_0_wrapper> for timing and area information for instance <axi_dispctrl_0>.
+Loading core <system_axi_vdma_0_wrapper> for timing and area information for instance <axi_vdma_0>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+WARNING:Xst:528 - Multi-source in Unit <system_processing_system7_0_wrapper> on signal <PS_SRSTB>; this signal is connected to multiple drivers.
+Drivers are: 
+   Primary input port <processing_system7_0_PS_SRSTB_pin>
+   Output port PS7:PSSRSTB of instance <processing_system7_0/processing_system7_0/PS7_i>
+
+WARNING:Xst:528 - Multi-source in Unit <system_processing_system7_0_wrapper> on signal <PS_CLK>; this signal is connected to multiple drivers.
+Drivers are: 
+   Primary input port <processing_system7_0_PS_CLK_pin>
+   Output port PS7:PSCLK of instance <processing_system7_0/processing_system7_0/PS7_i>
+
+WARNING:Xst:528 - Multi-source in Unit <system_processing_system7_0_wrapper> on signal <PS_PORB>; this signal is connected to multiple drivers.
+Drivers are: 
+   Primary input port <processing_system7_0_PS_PORB_pin>
+   Output port PS7:PSPORB of instance <processing_system7_0/processing_system7_0/PS7_i>
+
+Optimizing unit <system> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 0) on block system, actual ratio is 3.
+INFO:Xst:2260 - The FF/Latch <axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/grant_rnw> in Unit <axi_interconnect_1> is equivalent to the following FF/Latch : <axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/grant_rnw_1> 
+INFO:Xst:2260 - The FF/Latch <axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i> in Unit <axi_interconnect_1> is equivalent to the following FF/Latch : <axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i_1> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_i> in Unit <axi_interconnect_2/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_fb> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <axi_interconnect_2/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i> in Unit <axi_interconnect_2/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_i> in Unit <axi_interconnect_2/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_fb> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <axi_interconnect_2/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i> in Unit <axi_interconnect_2/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_i> in Unit <axi_interconnect_2/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axi3.axi3_conv_inst/USE_READ.USE_SPLIT.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_fb> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <axi_interconnect_2/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axi3.axi3_conv_inst/USE_READ.USE_SPLIT.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i> in Unit <axi_interconnect_2/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axi3.axi3_conv_inst/USE_READ.USE_SPLIT.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <axi_dispctrl_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_12> in Unit <axi_dispctrl_0> is equivalent to the following FF/Latch : <axi_dispctrl_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_12_1> 
+INFO:Xst:2260 - The FF/Latch <axi_dispctrl_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_0> in Unit <axi_dispctrl_0> is equivalent to the following 2 FFs/Latches : <axi_dispctrl_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_0_1> <axi_dispctrl_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_0_2> 
+INFO:Xst:2260 - The FF/Latch <axi_dispctrl_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_2> in Unit <axi_dispctrl_0> is equivalent to the following 2 FFs/Latches : <axi_dispctrl_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_2_1> <axi_dispctrl_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_2_2> 
+INFO:Xst:2260 - The FF/Latch <axi_dispctrl_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg> in Unit <axi_dispctrl_0> is equivalent to the following FF/Latch : <axi_dispctrl_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg_1> 
+INFO:Xst:2260 - The FF/Latch <axi_dispctrl_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_10> in Unit <axi_dispctrl_0> is equivalent to the following FF/Latch : <axi_dispctrl_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_10_1> 
+INFO:Xst:2260 - The FF/Latch <axi_dispctrl_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_8> in Unit <axi_dispctrl_0> is equivalent to the following FF/Latch : <axi_dispctrl_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_8_1> 
+INFO:Xst:2260 - The FF/Latch <axi_vdma_0/I_RST_MODULE/GEN_RESET_FOR_MM2S.RESET_I/GEN_MIN_FOR_ASYNC.LITE_IDLE_CDC_I/GENERATE_LEVEL_P_S_CDC_NO_RST.p_level_in_d1_cdc_from> in Unit <axi_vdma_0> is equivalent to the following FF/Latch : <axi_vdma_0/I_RST_MODULE/GEN_RESET_FOR_MM2S.RESET_I/GEN_MIN_FOR_ASYNC.AXIS_IDLE_CDC_I/GENERATE_LEVEL_P_S_CDC_NO_RST.p_level_in_d1_cdc_from> 
+INFO:Xst:2260 - The FF/Latch <axi_vdma_0/I_RST_MODULE/GEN_RESET_FOR_MM2S.RESET_I/halt_i> in Unit <axi_vdma_0> is equivalent to the following FF/Latch : <axi_vdma_0/I_RST_MODULE/GEN_RESET_FOR_MM2S.RESET_I/halt_i_1> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/aempty_fwft_fb> in Unit <axi_vdma_0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/V6.I_SYNC_FIFOGEN_FIFO/V6_S6_AND_LATER.I_SYNC_FIFO_BRAM> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/aempty_fwft_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/curr_fwft_state_FSM_FFd2> in Unit <axi_vdma_0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/V6.I_SYNC_FIFOGEN_FIFO/V6_S6_AND_LATER.I_SYNC_FIFO_BRAM> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/user_valid> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i> in Unit <axi_vdma_0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/V6.I_SYNC_FIFOGEN_FIFO/V6_S6_AND_LATER.I_SYNC_FIFO_BRAM> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_fb> in Unit <axi_vdma_0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/V6.I_SYNC_FIFOGEN_FIFO/V6_S6_AND_LATER.I_SYNC_FIFO_BRAM> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <axi_vdma_0/GEN_SPRT_FOR_MM2S.MM2S_LINEBUFFER_I/GEN_LINEBUF_FLUSH_SOF.GEN_LINEBUFFER.GEN_ASYNC_FIFO.V6.I_LINEBUFFER_FIFO/fg91_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <axi_vdma_0/GEN_SPRT_FOR_MM2S.MM2S_LINEBUFFER_I/GEN_LINEBUF_FLUSH_SOF.GEN_LINEBUFFER.GEN_ASYNC_FIFO.V6.I_LINEBUFFER_FIFO/fg91_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <axi_vdma_0/GEN_SPRT_FOR_MM2S.MM2S_LINEBUFFER_I/GEN_LINEBUF_FLUSH_SOF.GEN_LINEBUFFER.GEN_ASYNC_FIFO.V6.I_LINEBUFFER_FIFO/fg91_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_i> in Unit <axi_vdma_0/GEN_SPRT_FOR_MM2S.MM2S_LINEBUFFER_I/GEN_LINEBUF_FLUSH_SOF.GEN_LINEBUFFER.GEN_ASYNC_FIFO.V6.I_LINEBUFFER_FIFO/fg91_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_fb> 
+INFO:Xst:2260 - The FF/Latch <axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/grant_rnw> in Unit <axi_interconnect_1> is equivalent to the following FF/Latch : <axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/grant_rnw_1> 
+INFO:Xst:2260 - The FF/Latch <axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i> in Unit <axi_interconnect_1> is equivalent to the following FF/Latch : <axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i_1> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_i> in Unit <axi_interconnect_2/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_fb> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <axi_interconnect_2/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i> in Unit <axi_interconnect_2/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_i> in Unit <axi_interconnect_2/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_fb> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <axi_interconnect_2/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i> in Unit <axi_interconnect_2/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_i> in Unit <axi_interconnect_2/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axi3.axi3_conv_inst/USE_READ.USE_SPLIT.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_fb> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <axi_interconnect_2/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axi3.axi3_conv_inst/USE_READ.USE_SPLIT.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i> in Unit <axi_interconnect_2/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axi3.axi3_conv_inst/USE_READ.USE_SPLIT.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_i> in Unit <axi_interconnect_2/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_fb> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <axi_interconnect_2/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i> in Unit <axi_interconnect_2/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_i> in Unit <axi_interconnect_2/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_fb> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <axi_interconnect_2/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i> in Unit <axi_interconnect_2/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_i> in Unit <axi_interconnect_2/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axi3.axi3_conv_inst/USE_READ.USE_SPLIT.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_fb> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <axi_interconnect_2/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axi3.axi3_conv_inst/USE_READ.USE_SPLIT.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i> in Unit <axi_interconnect_2/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axi3.axi3_conv_inst/USE_READ.USE_SPLIT.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <axi_dispctrl_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_12> in Unit <axi_dispctrl_0> is equivalent to the following FF/Latch : <axi_dispctrl_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_12_1> 
+INFO:Xst:2260 - The FF/Latch <axi_dispctrl_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_0> in Unit <axi_dispctrl_0> is equivalent to the following 2 FFs/Latches : <axi_dispctrl_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_0_1> <axi_dispctrl_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_0_2> 
+INFO:Xst:2260 - The FF/Latch <axi_dispctrl_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_2> in Unit <axi_dispctrl_0> is equivalent to the following 2 FFs/Latches : <axi_dispctrl_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_2_1> <axi_dispctrl_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_2_2> 
+INFO:Xst:2260 - The FF/Latch <axi_dispctrl_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg> in Unit <axi_dispctrl_0> is equivalent to the following FF/Latch : <axi_dispctrl_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg_1> 
+INFO:Xst:2260 - The FF/Latch <axi_dispctrl_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_10> in Unit <axi_dispctrl_0> is equivalent to the following FF/Latch : <axi_dispctrl_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_10_1> 
+INFO:Xst:2260 - The FF/Latch <axi_dispctrl_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_8> in Unit <axi_dispctrl_0> is equivalent to the following FF/Latch : <axi_dispctrl_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_8_1> 
+INFO:Xst:2260 - The FF/Latch <axi_vdma_0/I_RST_MODULE/GEN_RESET_FOR_MM2S.RESET_I/GEN_MIN_FOR_ASYNC.LITE_IDLE_CDC_I/GENERATE_LEVEL_P_S_CDC_NO_RST.p_level_in_d1_cdc_from> in Unit <axi_vdma_0> is equivalent to the following FF/Latch : <axi_vdma_0/I_RST_MODULE/GEN_RESET_FOR_MM2S.RESET_I/GEN_MIN_FOR_ASYNC.AXIS_IDLE_CDC_I/GENERATE_LEVEL_P_S_CDC_NO_RST.p_level_in_d1_cdc_from> 
+INFO:Xst:2260 - The FF/Latch <axi_vdma_0/I_RST_MODULE/GEN_RESET_FOR_MM2S.RESET_I/halt_i> in Unit <axi_vdma_0> is equivalent to the following FF/Latch : <axi_vdma_0/I_RST_MODULE/GEN_RESET_FOR_MM2S.RESET_I/halt_i_1> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/aempty_fwft_fb> in Unit <axi_vdma_0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/V6.I_SYNC_FIFOGEN_FIFO/V6_S6_AND_LATER.I_SYNC_FIFO_BRAM> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/aempty_fwft_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/curr_fwft_state_FSM_FFd2> in Unit <axi_vdma_0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/V6.I_SYNC_FIFOGEN_FIFO/V6_S6_AND_LATER.I_SYNC_FIFO_BRAM> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/user_valid> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i> in Unit <axi_vdma_0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/V6.I_SYNC_FIFOGEN_FIFO/V6_S6_AND_LATER.I_SYNC_FIFO_BRAM> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_fb> in Unit <axi_vdma_0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/V6.I_SYNC_FIFOGEN_FIFO/V6_S6_AND_LATER.I_SYNC_FIFO_BRAM> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <axi_vdma_0/GEN_SPRT_FOR_MM2S.MM2S_LINEBUFFER_I/GEN_LINEBUF_FLUSH_SOF.GEN_LINEBUFFER.GEN_ASYNC_FIFO.V6.I_LINEBUFFER_FIFO/fg91_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <axi_vdma_0/GEN_SPRT_FOR_MM2S.MM2S_LINEBUFFER_I/GEN_LINEBUF_FLUSH_SOF.GEN_LINEBUFFER.GEN_ASYNC_FIFO.V6.I_LINEBUFFER_FIFO/fg91_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <axi_vdma_0/GEN_SPRT_FOR_MM2S.MM2S_LINEBUFFER_I/GEN_LINEBUF_FLUSH_SOF.GEN_LINEBUFFER.GEN_ASYNC_FIFO.V6.I_LINEBUFFER_FIFO/fg91_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_i> in Unit <axi_vdma_0/GEN_SPRT_FOR_MM2S.MM2S_LINEBUFFER_I/GEN_LINEBUF_FLUSH_SOF.GEN_LINEBUFFER.GEN_ASYNC_FIFO.V6.I_LINEBUFFER_FIFO/fg91_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_fb> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/curr_fwft_state_FSM_FFd2> in Unit <axi_vdma_0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/V6.I_SYNC_FIFOGEN_FIFO/V6_S6_AND_LATER.I_SYNC_FIFO_BRAM> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/user_valid> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/aempty_fwft_fb> in Unit <axi_vdma_0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/V6.I_SYNC_FIFOGEN_FIFO/V6_S6_AND_LATER.I_SYNC_FIFO_BRAM> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/aempty_fwft_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i> in Unit <axi_vdma_0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/V6.I_SYNC_FIFOGEN_FIFO/V6_S6_AND_LATER.I_SYNC_FIFO_BRAM> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_fb> in Unit <axi_vdma_0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/V6.I_SYNC_FIFOGEN_FIFO/V6_S6_AND_LATER.I_SYNC_FIFO_BRAM> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <axi_vdma_0/GEN_SPRT_FOR_MM2S.MM2S_LINEBUFFER_I/GEN_LINEBUF_FLUSH_SOF.GEN_LINEBUFFER.GEN_ASYNC_FIFO.V6.I_LINEBUFFER_FIFO/fg91_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_i> in Unit <axi_vdma_0/GEN_SPRT_FOR_MM2S.MM2S_LINEBUFFER_I/GEN_LINEBUF_FLUSH_SOF.GEN_LINEBUFFER.GEN_ASYNC_FIFO.V6.I_LINEBUFFER_FIFO/fg91_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_fb> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <axi_vdma_0/GEN_SPRT_FOR_MM2S.MM2S_LINEBUFFER_I/GEN_LINEBUF_FLUSH_SOF.GEN_LINEBUFFER.GEN_ASYNC_FIFO.V6.I_LINEBUFFER_FIFO/fg91_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <axi_vdma_0/GEN_SPRT_FOR_MM2S.MM2S_LINEBUFFER_I/GEN_LINEBUF_FLUSH_SOF.GEN_LINEBUFFER.GEN_ASYNC_FIFO.V6.I_LINEBUFFER_FIFO/fg91_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1> 
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : system.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 3299
+#      GND                         : 13
+#      INV                         : 164
+#      LUT1                        : 29
+#      LUT2                        : 395
+#      LUT3                        : 426
+#      LUT4                        : 494
+#      LUT5                        : 420
+#      LUT6                        : 797
+#      MUXCY                       : 282
+#      MUXCY_L                     : 15
+#      MUXF7                       : 13
+#      VCC                         : 7
+#      XORCY                       : 244
+# FlipFlops/Latches                : 2711
+#      FD                          : 411
+#      FDC                         : 165
+#      FDCE                        : 203
+#      FDE                         : 117
+#      FDP                         : 53
+#      FDPE                        : 2
+#      FDR                         : 207
+#      FDRE                        : 1509
+#      FDS                         : 27
+#      FDSE                        : 17
+# RAMS                             : 5
+#      RAM32M                      : 2
+#      RAM32X1D                    : 1
+#      RAMB18E1                    : 1
+#      RAMB36E1                    : 1
+# Shift Registers                  : 184
+#      SRLC16E                     : 184
+# Clock Buffers                    : 3
+#      BUFG                        : 2
+#      BUFGCTRL                    : 1
+# IO Buffers                       : 2
+#      IOBUF                       : 2
+# Others                           : 5
+#      BUFIO                       : 1
+#      BUFR                        : 2
+#      MMCME2_ADV                  : 1
+#      PS7                         : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7z020clg400-1 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:            2711  out of  106400     2%  
+ Number of Slice LUTs:                 2919  out of  53200     5%  
+    Number used as Logic:              2725  out of  53200     5%  
+    Number used as Memory:              194  out of  17400     1%  
+       Number used as RAM:               10
+       Number used as SRL:              184
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   4367
+   Number with an unused Flip Flop:    1656  out of   4367    37%  
+   Number with an unused LUT:          1448  out of   4367    33%  
+   Number of fully used LUT-FF pairs:  1263  out of   4367    28%  
+   Number of unique control sets:       154
+
+IO Utilization: 
+ Number of IOs:                         163
+ Number of bonded IOBs:                   3  out of    125     2%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                2  out of    140     1%  
+    Number using Block RAM only:          2
+ Number of BUFG/BUFGCTRLs:                3  out of     32     9%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+----------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+-------+
+Clock Signal                                                    | Clock buffer(FF name)                                                                                                                     | Load  |
+----------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+-------+
+processing_system7_0/processing_system7_0/FCLK_CLK_unbuffered<0>| BUFG                                                                                                                                      | 2493  |
+axi_dispctrl_0/axi_dispctrl_0/USER_LOGIC_I/mmcm_clk_inv         | BUFG                                                                                                                                      | 1     |
+axi_dispctrl_0/axi_dispctrl_0/USER_LOGIC_I/mmcm_clk             | BUFR                                                                                                                                      | 405   |
+net_gnd0                                                        | NONE(axi_vdma_0/axi_vdma_0/GEN_SPRT_FOR_MM2S.MM2S_VID_CDC_I/GEN_CDC_FOR_ASYNC.OTHR_FSYNC_CDC_I/GENERATE_PULSE_S_P_CDC_OPEN_ENDED.p_out_d4)| 4     |
+----------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+Control Signal                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            | Buffer(FF name)                                                                                                                                                                                                                                                                                                                                                     | Load  |
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+axi_dispctrl_0/axi_dispctrl_0/USER_LOGIC_I/Inst_vdma_to_vga/LOCKED_I_inv(axi_dispctrl_0/axi_dispctrl_0/USER_LOGIC_I/locked_n1_INV_0:O)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | NONE(axi_dispctrl_0/axi_dispctrl_0/USER_LOGIC_I/USE_BUFR_DIV5.BUFR_inst_inv)                                                                                                                                                                                                                                                                                        | 2     |
+axi_vdma_0/axi_vdma_0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/V6.I_SYNC_FIFOGEN_FIFO/V6_S6_AND_LATER.I_SYNC_FIFO_BRAM/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmgb.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/DBITERR(axi_vdma_0/axi_vdma_0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/V6.I_SYNC_FIFOGEN_FIFO/V6_S6_AND_LATER.I_SYNC_FIFO_BRAM/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmgb.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/XST_GND:G)| NONE(axi_vdma_0/axi_vdma_0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/V6.I_SYNC_FIFOGEN_FIFO/V6_S6_AND_LATER.I_SYNC_FIFO_BRAM/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmgb.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SDP.WIDE_PRIM36.ram)| 2     |
+axi_dispctrl_0/ENABLE_O(axi_dispctrl_0/axi_dispctrl_0/USER_LOGIC_I/enable_reg:Q)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | NONE(axi_dispctrl_0/axi_dispctrl_0/USER_LOGIC_I/USE_BUFR_DIV5.BUFR_inst_inv)                                                                                                                                                                                                                                                                                        | 1     |
+axi_dispctrl_0/N1(axi_dispctrl_0/XST_VCC:P)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | NONE(axi_dispctrl_0/axi_dispctrl_0/USER_LOGIC_I/USE_BUFR_DIV5.BUFR_inst)                                                                                                                                                                                                                                                                                            | 1     |
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: 5.185ns (Maximum Frequency: 192.865MHz)
+   Minimum input arrival time before clock: 3.306ns
+   Maximum output required time after clock: 4.381ns
+   Maximum combinational path delay: 1.042ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'processing_system7_0/processing_system7_0/FCLK_CLK_unbuffered<0>'
+  Clock period: 5.185ns (frequency: 192.865MHz)
+  Total number of paths / destination ports: 64961 / 6179
+-------------------------------------------------------------------------
+Delay:               5.185ns (Levels of Logic = 10)
+  Source:            axi_dispctrl_0/axi_dispctrl_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_12_1 (FF)
+  Destination:       axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_grant_hot_i_0 (FF)
+  Source Clock:      processing_system7_0/processing_system7_0/FCLK_CLK_unbuffered<0> rising
+  Destination Clock: processing_system7_0/processing_system7_0/FCLK_CLK_unbuffered<0> rising
+
+  Data Path: axi_dispctrl_0/axi_dispctrl_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_12_1 to axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_grant_hot_i_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               4   0.282   0.505  axi_dispctrl_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_12_1 (axi_dispctrl_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_12_1)
+     LUT2:I0->O           34   0.053   0.566  axi_dispctrl_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/rdce_out_i<12>1 (axi_dispctrl_0/ipif_Bus2IP_RdCE<0>)
+     LUT6:I5->O            1   0.053   0.000  axi_dispctrl_0/USER_LOGIC_I/slv_read_ack<0>1_F (N411)
+     MUXF7:I0->O           3   0.214   0.616  axi_dispctrl_0/USER_LOGIC_I/slv_read_ack<0>1 (axi_dispctrl_0/USER_LOGIC_I/slv_read_ack<0>)
+     LUT6:I3->O            2   0.053   0.491  axi_dispctrl_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/rd_done1 (S_AXI_ARREADY)
+     end scope: 'axi_dispctrl_0:S_AXI_ARREADY'
+     begin scope: 'axi_interconnect_1:M_AXI_ARREADY<0>'
+     LUT4:I2->O            1   0.053   0.739  axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/mi_arvalid<0>1_SW0 (N41)
+     LUT6:I0->O            2   0.053   0.419  axi_interconnect_1/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/S_AXI_ARREADY1 (DEBUG_MC_MP_ARADDRCONTROL<1>)
+     LUT5:I4->O            2   0.053   0.419  axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.splitter_ar/out1_SW0 (N39)
+     LUT6:I5->O            3   0.053   0.499  axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.splitter_ar/out1 (axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/aa_arready)
+     LUT6:I4->O            1   0.053   0.000  axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_grant_hot_i_0_glue_set (axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_grant_hot_i_0_glue_set)
+     FDR:D                     0.011          axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_grant_hot_i_0
+    ----------------------------------------
+    Total                      5.185ns (0.931ns logic, 4.254ns route)
+                                       (18.0% logic, 82.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'axi_dispctrl_0/axi_dispctrl_0/USER_LOGIC_I/mmcm_clk'
+  Clock period: 3.132ns (frequency: 319.285MHz)
+  Total number of paths / destination ports: 7955 / 651
+-------------------------------------------------------------------------
+Delay:               3.132ns (Levels of Logic = 15)
+  Source:            axi_dispctrl_0/axi_dispctrl_0/USER_LOGIC_I/Inst_vdma_to_vga/h_max_11 (FF)
+  Destination:       axi_dispctrl_0/axi_dispctrl_0/USER_LOGIC_I/Inst_vdma_to_vga/v_cntr_reg_11 (FF)
+  Source Clock:      axi_dispctrl_0/axi_dispctrl_0/USER_LOGIC_I/mmcm_clk rising
+  Destination Clock: axi_dispctrl_0/axi_dispctrl_0/USER_LOGIC_I/mmcm_clk rising
+
+  Data Path: axi_dispctrl_0/axi_dispctrl_0/USER_LOGIC_I/Inst_vdma_to_vga/h_max_11 to axi_dispctrl_0/axi_dispctrl_0/USER_LOGIC_I/Inst_vdma_to_vga/v_cntr_reg_11
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             1   0.282   0.739  axi_dispctrl_0/USER_LOGIC_I/Inst_vdma_to_vga/h_max_11 (axi_dispctrl_0/USER_LOGIC_I/Inst_vdma_to_vga/h_max<11>)
+     LUT6:I0->O            3   0.053   0.649  axi_dispctrl_0/USER_LOGIC_I/Inst_vdma_to_vga/h_cntr_reg[11]_h_max[11]_equal_29_o121 (axi_dispctrl_0/USER_LOGIC_I/Inst_vdma_to_vga/h_cntr_reg[11]_h_max[11]_equal_29_o12)
+     LUT4:I0->O            8   0.053   0.531  axi_dispctrl_0/USER_LOGIC_I/Inst_vdma_to_vga/h_cntr_reg[11]_h_max[11]_equal_29_o125_1 (axi_dispctrl_0/USER_LOGIC_I/Inst_vdma_to_vga/h_cntr_reg[11]_h_max[11]_equal_29_o125)
+     LUT6:I4->O            1   0.053   0.000  axi_dispctrl_0/USER_LOGIC_I/Inst_vdma_to_vga/Mmux_GND_33_o_frm_height[11]_mux_43_OUT_rs_lut<0> (axi_dispctrl_0/USER_LOGIC_I/Inst_vdma_to_vga/Mmux_GND_33_o_frm_height[11]_mux_43_OUT_rs_lut<0>)
+     MUXCY:S->O            1   0.291   0.000  axi_dispctrl_0/USER_LOGIC_I/Inst_vdma_to_vga/Mmux_GND_33_o_frm_height[11]_mux_43_OUT_rs_cy<0> (axi_dispctrl_0/USER_LOGIC_I/Inst_vdma_to_vga/Mmux_GND_33_o_frm_height[11]_mux_43_OUT_rs_cy<0>)
+     MUXCY:CI->O           1   0.015   0.000  axi_dispctrl_0/USER_LOGIC_I/Inst_vdma_to_vga/Mmux_GND_33_o_frm_height[11]_mux_43_OUT_rs_cy<1> (axi_dispctrl_0/USER_LOGIC_I/Inst_vdma_to_vga/Mmux_GND_33_o_frm_height[11]_mux_43_OUT_rs_cy<1>)
+     MUXCY:CI->O           1   0.015   0.000  axi_dispctrl_0/USER_LOGIC_I/Inst_vdma_to_vga/Mmux_GND_33_o_frm_height[11]_mux_43_OUT_rs_cy<2> (axi_dispctrl_0/USER_LOGIC_I/Inst_vdma_to_vga/Mmux_GND_33_o_frm_height[11]_mux_43_OUT_rs_cy<2>)
+     MUXCY:CI->O           1   0.015   0.000  axi_dispctrl_0/USER_LOGIC_I/Inst_vdma_to_vga/Mmux_GND_33_o_frm_height[11]_mux_43_OUT_rs_cy<3> (axi_dispctrl_0/USER_LOGIC_I/Inst_vdma_to_vga/Mmux_GND_33_o_frm_height[11]_mux_43_OUT_rs_cy<3>)
+     MUXCY:CI->O           1   0.015   0.000  axi_dispctrl_0/USER_LOGIC_I/Inst_vdma_to_vga/Mmux_GND_33_o_frm_height[11]_mux_43_OUT_rs_cy<4> (axi_dispctrl_0/USER_LOGIC_I/Inst_vdma_to_vga/Mmux_GND_33_o_frm_height[11]_mux_43_OUT_rs_cy<4>)
+     MUXCY:CI->O           1   0.015   0.000  axi_dispctrl_0/USER_LOGIC_I/Inst_vdma_to_vga/Mmux_GND_33_o_frm_height[11]_mux_43_OUT_rs_cy<5> (axi_dispctrl_0/USER_LOGIC_I/Inst_vdma_to_vga/Mmux_GND_33_o_frm_height[11]_mux_43_OUT_rs_cy<5>)
+     MUXCY:CI->O           1   0.015   0.000  axi_dispctrl_0/USER_LOGIC_I/Inst_vdma_to_vga/Mmux_GND_33_o_frm_height[11]_mux_43_OUT_rs_cy<6> (axi_dispctrl_0/USER_LOGIC_I/Inst_vdma_to_vga/Mmux_GND_33_o_frm_height[11]_mux_43_OUT_rs_cy<6>)
+     MUXCY:CI->O           1   0.015   0.000  axi_dispctrl_0/USER_LOGIC_I/Inst_vdma_to_vga/Mmux_GND_33_o_frm_height[11]_mux_43_OUT_rs_cy<7> (axi_dispctrl_0/USER_LOGIC_I/Inst_vdma_to_vga/Mmux_GND_33_o_frm_height[11]_mux_43_OUT_rs_cy<7>)
+     MUXCY:CI->O           1   0.015   0.000  axi_dispctrl_0/USER_LOGIC_I/Inst_vdma_to_vga/Mmux_GND_33_o_frm_height[11]_mux_43_OUT_rs_cy<8> (axi_dispctrl_0/USER_LOGIC_I/Inst_vdma_to_vga/Mmux_GND_33_o_frm_height[11]_mux_43_OUT_rs_cy<8>)
+     MUXCY:CI->O           1   0.015   0.000  axi_dispctrl_0/USER_LOGIC_I/Inst_vdma_to_vga/Mmux_GND_33_o_frm_height[11]_mux_43_OUT_rs_cy<9> (axi_dispctrl_0/USER_LOGIC_I/Inst_vdma_to_vga/Mmux_GND_33_o_frm_height[11]_mux_43_OUT_rs_cy<9>)
+     MUXCY:CI->O           0   0.015   0.000  axi_dispctrl_0/USER_LOGIC_I/Inst_vdma_to_vga/Mmux_GND_33_o_frm_height[11]_mux_43_OUT_rs_cy<10> (axi_dispctrl_0/USER_LOGIC_I/Inst_vdma_to_vga/Mmux_GND_33_o_frm_height[11]_mux_43_OUT_rs_cy<10>)
+     XORCY:CI->O           1   0.320   0.000  axi_dispctrl_0/USER_LOGIC_I/Inst_vdma_to_vga/Mmux_GND_33_o_frm_height[11]_mux_43_OUT_rs_xor<11> (axi_dispctrl_0/USER_LOGIC_I/Inst_vdma_to_vga/GND_33_o_frm_height[11]_mux_43_OUT<11>)
+     FDCE:D                    0.011          axi_dispctrl_0/USER_LOGIC_I/Inst_vdma_to_vga/v_cntr_reg_11
+    ----------------------------------------
+    Total                      3.132ns (1.213ns logic, 1.919ns route)
+                                       (38.7% logic, 61.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'net_gnd0'
+  Clock period: 0.692ns (frequency: 1445.087MHz)
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Delay:               0.692ns (Levels of Logic = 0)
+  Source:            axi_vdma_0/axi_vdma_0/GEN_SPRT_FOR_MM2S.MM2S_VID_CDC_I/GEN_CDC_FOR_ASYNC.OTHR_FSYNC_CDC_I/GENERATE_PULSE_S_P_CDC_OPEN_ENDED.p_out_d3 (FF)
+  Destination:       axi_vdma_0/axi_vdma_0/GEN_SPRT_FOR_MM2S.MM2S_VID_CDC_I/GEN_CDC_FOR_ASYNC.OTHR_FSYNC_CDC_I/GENERATE_PULSE_S_P_CDC_OPEN_ENDED.p_out_d4 (FF)
+  Source Clock:      net_gnd0 rising
+  Destination Clock: net_gnd0 rising
+
+  Data Path: axi_vdma_0/axi_vdma_0/GEN_SPRT_FOR_MM2S.MM2S_VID_CDC_I/GEN_CDC_FOR_ASYNC.OTHR_FSYNC_CDC_I/GENERATE_PULSE_S_P_CDC_OPEN_ENDED.p_out_d3 to axi_vdma_0/axi_vdma_0/GEN_SPRT_FOR_MM2S.MM2S_VID_CDC_I/GEN_CDC_FOR_ASYNC.OTHR_FSYNC_CDC_I/GENERATE_PULSE_S_P_CDC_OPEN_ENDED.p_out_d4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.282   0.399  axi_vdma_0/GEN_SPRT_FOR_MM2S.MM2S_VID_CDC_I/GEN_CDC_FOR_ASYNC.OTHR_FSYNC_CDC_I/GENERATE_PULSE_S_P_CDC_OPEN_ENDED.p_out_d3 (axi_vdma_0/GEN_SPRT_FOR_MM2S.MM2S_VID_CDC_I/GEN_CDC_FOR_ASYNC.OTHR_FSYNC_CDC_I/GENERATE_PULSE_S_P_CDC_OPEN_ENDED.p_out_d3)
+     FD:D                      0.011          axi_vdma_0/GEN_SPRT_FOR_MM2S.MM2S_VID_CDC_I/GEN_CDC_FOR_ASYNC.OTHR_FSYNC_CDC_I/GENERATE_PULSE_S_P_CDC_OPEN_ENDED.p_out_d4
+    ----------------------------------------
+    Total                      0.692ns (0.293ns logic, 0.399ns route)
+                                       (42.3% logic, 57.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'processing_system7_0/processing_system7_0/FCLK_CLK_unbuffered<0>'
+  Total number of paths / destination ports: 965 / 723
+-------------------------------------------------------------------------
+Offset:              3.306ns (Levels of Logic = 8)
+  Source:            processing_system7_0/processing_system7_0/PS7_i:SAXIHP0RVALID (PAD)
+  Destination:       axi_vdma_0/axi_vdma_0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/V6.I_SYNC_FIFOGEN_FIFO/V6_S6_AND_LATER.I_SYNC_FIFO_BRAM/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i (FF)
+  Destination Clock: processing_system7_0/processing_system7_0/FCLK_CLK_unbuffered<0> rising
+
+  Data Path: processing_system7_0/processing_system7_0/PS7_i:SAXIHP0RVALID to axi_vdma_0/axi_vdma_0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/V6.I_SYNC_FIFOGEN_FIFO/V6_S6_AND_LATER.I_SYNC_FIFO_BRAM/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    PS7:SAXIHP0RVALID      3   0.000   0.000  processing_system7_0/PS7_i (S_AXI_HP0_RVALID)
+     end scope: 'processing_system7_0:S_AXI_HP0_RVALID'
+     begin scope: 'axi_interconnect_2:M_AXI_RVALID<0>'
+     LUT2:I0->O            8   0.053   0.771  axi_interconnect_2/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axi3.axi3_conv_inst/USE_READ.USE_SPLIT.read_data_inst/S_AXI_RVALID_I1 (DEBUG_MC_MP_RDATACONTROL<0>)
+     end scope: 'axi_interconnect_2:S_AXI_RVALID<0>'
+     begin scope: 'axi_vdma_0:m_axi_mm2s_rvalid'
+     LUT5:I0->O            4   0.053   0.745  axi_vdma_0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/sig_good_sin_strm_dbeat1 (axi_vdma_0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/sig_good_sin_strm_dbeat)
+     begin scope: 'axi_vdma_0/axi_vdma_0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/V6.I_SYNC_FIFOGEN_FIFO/V6_S6_AND_LATER.I_SYNC_FIFO_BRAM:WR_EN'
+     LUT5:I0->O            1   0.053   0.602  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/Mmux_ram_full_comb_GND_299_o_MUX_25_o13 (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/Mmux_ram_full_comb_GND_299_o_MUX_25_o12)
+     LUT6:I3->O            1   0.053   0.413  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/Mmux_ram_full_comb_GND_299_o_MUX_25_o14 (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/Mmux_ram_full_comb_GND_299_o_MUX_25_o13)
+     LUT6:I5->O            2   0.053   0.000  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/Mmux_ram_full_comb_GND_299_o_MUX_25_o111 (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_comb_GND_299_o_MUX_25_o)
+     FD:D                      0.011          U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i
+    ----------------------------------------
+    Total                      3.306ns (0.775ns logic, 2.531ns route)
+                                       (23.4% logic, 76.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'axi_dispctrl_0/axi_dispctrl_0/USER_LOGIC_I/mmcm_clk'
+  Total number of paths / destination ports: 158 / 158
+-------------------------------------------------------------------------
+Offset:              1.390ns (Levels of Logic = 1)
+  Source:            axi_dispctrl_0/axi_dispctrl_0/USER_LOGIC_I/USE_BUFR_DIV5.Inst_mmcme2_drp/mmcm_adv_inst:LOCKED (PAD)
+  Destination:       axi_dispctrl_0/axi_dispctrl_0/USER_LOGIC_I/Inst_vdma_to_vga/vga_state_FSM_FFd2 (FF)
+  Destination Clock: axi_dispctrl_0/axi_dispctrl_0/USER_LOGIC_I/mmcm_clk rising
+
+  Data Path: axi_dispctrl_0/axi_dispctrl_0/USER_LOGIC_I/USE_BUFR_DIV5.Inst_mmcme2_drp/mmcm_adv_inst:LOCKED to axi_dispctrl_0/axi_dispctrl_0/USER_LOGIC_I/Inst_vdma_to_vga/vga_state_FSM_FFd2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    MMCME2_ADV:LOCKED      4   0.000   0.419  axi_dispctrl_0/USER_LOGIC_I/USE_BUFR_DIV5.Inst_mmcme2_drp/mmcm_adv_inst (LOCKED_O)
+     INV:I->O            158   0.067   0.579  axi_dispctrl_0/USER_LOGIC_I/locked_n1_INV_0 (axi_dispctrl_0/USER_LOGIC_I/Inst_vdma_to_vga/LOCKED_I_inv)
+     FDCE:CLR                  0.325          axi_dispctrl_0/USER_LOGIC_I/Inst_vdma_to_vga/frm_height_0
+    ----------------------------------------
+    Total                      1.390ns (0.392ns logic, 0.998ns route)
+                                       (28.2% logic, 71.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'axi_dispctrl_0/axi_dispctrl_0/USER_LOGIC_I/mmcm_clk'
+  Total number of paths / destination ports: 27 / 27
+-------------------------------------------------------------------------
+Offset:              0.282ns (Levels of Logic = 1)
+  Source:            axi_dispctrl_0/axi_dispctrl_0/USER_LOGIC_I/Inst_vdma_to_vga/red_reg_7 (FF)
+  Destination:       axi_dispctrl_0_RED_O_pin<7> (PAD)
+  Source Clock:      axi_dispctrl_0/axi_dispctrl_0/USER_LOGIC_I/mmcm_clk rising
+
+  Data Path: axi_dispctrl_0/axi_dispctrl_0/USER_LOGIC_I/Inst_vdma_to_vga/red_reg_7 to axi_dispctrl_0_RED_O_pin<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              0   0.282   0.000  axi_dispctrl_0/USER_LOGIC_I/Inst_vdma_to_vga/red_reg_7 (RED_O<7>)
+     end scope: 'axi_dispctrl_0:RED_O<7>'
+    ----------------------------------------
+    Total                      0.282ns (0.282ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'processing_system7_0/processing_system7_0/FCLK_CLK_unbuffered<0>'
+  Total number of paths / destination ports: 829 / 153
+-------------------------------------------------------------------------
+Offset:              4.381ns (Levels of Logic = 8)
+  Source:            axi_dispctrl_0/axi_dispctrl_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_10 (FF)
+  Destination:       processing_system7_0/processing_system7_0/PS7_i:MAXIGP0WREADY (PAD)
+  Source Clock:      processing_system7_0/processing_system7_0/FCLK_CLK_unbuffered<0> rising
+
+  Data Path: axi_dispctrl_0/axi_dispctrl_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_10 to processing_system7_0/processing_system7_0/PS7_i:MAXIGP0WREADY
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              41   0.282   0.640  axi_dispctrl_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_10 (axi_dispctrl_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_10)
+     LUT2:I0->O            1   0.053   0.399  axi_dispctrl_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/wrce_out_i<10>1 (axi_dispctrl_0/ipif_Bus2IP_WrCE<2>)
+     MUXF7:S->O            2   0.280   0.419  axi_dispctrl_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/wr_done1 (axi_dispctrl_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/wr_done)
+     LUT5:I4->O            5   0.053   0.629  axi_dispctrl_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/wr_done3 (S_AXI_AWREADY)
+     end scope: 'axi_dispctrl_0:S_AXI_WREADY'
+     begin scope: 'axi_interconnect_1:M_AXI_WREADY<0>'
+     LUT3:I0->O            1   0.053   0.635  axi_interconnect_1/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/S_AXI_WREADY1 (DEBUG_MC_MP_WDATACONTROL<1>)
+     LUT6:I2->O            4   0.053   0.433  axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.mi_wready_mux_inst/o_i (axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.mi_wready_mux_inst/o_i)
+     LUT5:I4->O            1   0.053   0.399  axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/si_wready1 (DEBUG_SF_CB_WDATACONTROL<1>)
+     end scope: 'axi_interconnect_1:S_AXI_WREADY<0>'
+     begin scope: 'processing_system7_0:M_AXI_GP0_WREADY'
+    PS7:MAXIGP0WREADY          0.000          processing_system7_0/PS7_i
+    ----------------------------------------
+    Total                      4.381ns (0.827ns logic, 3.554ns route)
+                                       (18.9% logic, 81.1% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 138 / 136
+-------------------------------------------------------------------------
+Delay:               1.042ns (Levels of Logic = 3)
+  Source:            processing_system7_0/processing_system7_0/PS7_i:SAXIHP0BVALID (PAD)
+  Destination:       processing_system7_0/processing_system7_0/PS7_i:SAXIHP0BREADY (PAD)
+
+  Data Path: processing_system7_0/processing_system7_0/PS7_i:SAXIHP0BVALID to processing_system7_0/processing_system7_0/PS7_i:SAXIHP0BREADY
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    PS7:SAXIHP0BVALID     10   0.000   0.000  processing_system7_0/PS7_i (S_AXI_HP0_BVALID)
+     end scope: 'processing_system7_0:S_AXI_HP0_BVALID'
+     begin scope: 'axi_interconnect_2:M_AXI_BVALID<0>'
+     LUT2:I0->O            8   0.053   0.445  axi_interconnect_2/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axi3.axi3_conv_inst/USE_WRITE.USE_SPLIT.write_resp_inst/M_AXI_BREADY_I1 (DEBUG_MP_MR_BRESP<1>)
+     end scope: 'axi_interconnect_2:M_AXI_BREADY<0>'
+     begin scope: 'processing_system7_0:S_AXI_HP0_BREADY'
+    PS7:SAXIHP0BREADY          0.000          processing_system7_0/PS7_i
+    ----------------------------------------
+    Total                      1.042ns (0.597ns logic, 0.445ns route)
+                                       (57.3% logic, 42.7% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock axi_dispctrl_0/axi_dispctrl_0/USER_LOGIC_I/mmcm_clk
+----------------------------------------------------------------+---------+---------+---------+---------+
+                                                                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                                    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------------------------------------------+---------+---------+---------+---------+
+axi_dispctrl_0/axi_dispctrl_0/USER_LOGIC_I/mmcm_clk             |    3.132|         |         |         |
+processing_system7_0/processing_system7_0/FCLK_CLK_unbuffered<0>|    2.227|         |         |         |
+----------------------------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock net_gnd0
+---------------------------------------------------+---------+---------+---------+---------+
+                                                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------------------------------------+---------+---------+---------+---------+
+axi_dispctrl_0/axi_dispctrl_0/USER_LOGIC_I/mmcm_clk|    0.698|         |         |         |
+net_gnd0                                           |    0.692|         |         |         |
+---------------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock processing_system7_0/processing_system7_0/FCLK_CLK_unbuffered<0>
+----------------------------------------------------------------+---------+---------+---------+---------+
+                                                                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                                    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------------------------------------------+---------+---------+---------+---------+
+axi_dispctrl_0/axi_dispctrl_0/USER_LOGIC_I/mmcm_clk             |    1.224|         |         |         |
+processing_system7_0/processing_system7_0/FCLK_CLK_unbuffered<0>|    5.185|         |         |         |
+----------------------------------------------------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 13.00 secs
+Total CPU time to Xst completion: 12.74 secs
+ 
+--> 
+
+
+Total memory usage is 643112 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    8 (   0 filtered)
+Number of infos    :  628 (   0 filtered)
+
