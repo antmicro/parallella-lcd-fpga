@@ -1,2 +1,0 @@
-parallella-lcd-ipcore
-=====================
