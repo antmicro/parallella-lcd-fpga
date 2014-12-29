@@ -24,4 +24,4 @@ For different screens an adapter board might be needed.
 License
 -------
 
-This software, unless otherwise stated, is released on the `MIT license <http://opensource.org/licenses/MIT>`_.
+This software, unless otherwise stated, is released on the `3-clause BSD license <http://opensource.org/licenses/BSD-3-Clause>`_.
